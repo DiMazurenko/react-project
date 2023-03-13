@@ -1,0 +1,70 @@
+body {
+  --main-color: #7749f8;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: center;
+}
+
+main {
+  width: 1110px;
+  display: flex;
+  justify-content: space-between;
+}
+
+header {
+  width: 1110px;
+  margin-bottom: 48px;
+}
+
+.navbar-brand {
+  font-weight: 600;
+}
+
+.list-group {
+  width: 255px;
+}
+
+.card {
+  max-width: 540px;
+}
+
+.btn-primary {
+  background-color: var(--main-color);
+  border-color: var(--main-color);
+}
+
+.list-group-item.active {
+  background-color: var(--main-color);
+  border-color: var(--main-color);
+}
+
+.btn-primary:hover {
+  background-color: var(--main-color);
+  border-color: var(--main-color);
+}
+
+.list-group_modify {
+  display: flex;
+  gap: 20px;
+}
+
+.list-group_modify li {
+  border: 1px solid var(--main-color);
+  border-top: 1px;
+  border: none;
+  background-color: rgb(240, 240, 240);
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.list-group_modify li:hover {
+  background-color: var(--main-color);
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.7);
+  transition: all 0.4s ease 0s;
+  transform: translateY(-5px);
+}
