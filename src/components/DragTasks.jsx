@@ -1,8 +1,11 @@
+import { useRef } from 'react';
 import styles from './DragTasks.module.css';
 import classNames from 'classnames';
 import Draggable from 'react-draggable';
 
 const DragTasks = ({ tasks, setTasks }) => {
+  const nodeRef = useRef(null);
+
   const updatePosition = (data, index) => {
     let newArr = [...tasks];
     newArr[index].defaultPosition = { x: data.x, y: data.y };
@@ -22,8 +25,10 @@ const DragTasks = ({ tasks, setTasks }) => {
         onStop={(_, data) => {
           updatePosition(data, index);
         }}
+        nodeRef={nodeRef}
       >
         <div
+          ref={nodeRef}
           className={classNames(styles.task)}
           style={{ backgroundColor: task.color }}
         >
