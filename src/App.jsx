@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
-
+import styles from './App.module.css';
+import classNames from 'classnames';
 import InputForm from './components/InputForm';
 import DragTasks from './components/DragTasks';
 
@@ -14,14 +15,14 @@ function App() {
   }, [tasks]);
 
   return (
-    <>
+    <div className={classNames(styles.wrapper)}>
       <InputForm
         setInputTask={setInputTask}
         inputTask={inputTask}
         setTasks={setTasks}
       />
       <DragTasks tasks={tasks} setTasks={setTasks} />
-    </>
+    </div>
   );
 }
 
