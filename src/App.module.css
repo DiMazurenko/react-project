@@ -33,3 +33,25 @@
   color: #222;
   cursor: pointer;
 }
+
+.task {
+  position: absolute;
+  cursor: move;
+  min-width: 215px;
+  color: black;
+  padding: 1em;
+  border-radius: 5px;
+}
+
+.task__button_close {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  background: none;
+  border: none;
+}
+
+.task__button_close:hover {
+  color: red;
+  cursor: pointer;
+}
